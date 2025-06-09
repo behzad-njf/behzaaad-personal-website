@@ -1,4 +1,3 @@
-import { Code, ExternalLink, Github, Mail } from "lucide-react"
 import "./App.css"
 import Profile from './assets/Profile.jpg'
 import Navbar from "./layout/Navbar"
