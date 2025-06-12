@@ -1,5 +1,9 @@
 import React from "react";
 import { ExternalLink } from "lucide-react";
+import DONG_IMAGE from "../assets/dong.png"
+import TRIX from "../assets/trix.png"
+import SHELEM from "../assets/shelem.png"
+import MAFIA from "../assets/mafia.png"
 
 type Project = {
   title: string;
@@ -11,28 +15,36 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Dong",
+    title: "Dong (دنگ)",
     description:
-      "A modern web app built with React and Django, featuring clean UI and responsive design to showcase full-stack development skills.",
-    imageUrl: "/dong.svg?height=192&width=384", // Replace with your actual image path
-    techStack: ["React", "Django", "PostgreSQL"],
+      "An Android Application for Calculation and accounting of group expenses",
+    imageUrl: DONG_IMAGE, // Replace with your actual image path
+    techStack: ["Kotlin", "MVVM", "Coroutines","RoomDB","LiveData"],
     link: "https://github.com/behzad-njf/dong",
   },
   {
     title: "TrixCounter",
     description:
-      "A web-based score tracking tool for the Trix card game, using React for state management and a user-friendly interface.",
-    imageUrl: "/trixcounter.svg?height=192&width=384", // Replace with your actual image path
-    techStack: ["React", "JavaScript", "CSS"],
+      "An android application written in kotlin Jetpack Compose score tracking tool for the Trix card game.",
+    imageUrl: TRIX,
+    techStack: ["Kotlin", "Jetpack Compose", "Dagger Hilt","RoomDB","Multi Language","LiveData"],
     link: "https://github.com/behzad-njf/TrixCounter",
   },
   {
     title: "Shelem Shomar (شلم شمار)",
     description:
       "An Android app built with Kotlin and Jetpack Compose to track scores for the Shelem card game, implementing Clean Architecture and Room database.",
-    imageUrl: "/shelemshomar.svg?height=192&width=384", // Replace with your actual image path
+    imageUrl: SHELEM, 
     techStack: ["Kotlin", "Jetpack Compose", "Room", "Hilt"],
-    link: "#", // Add GitHub link once hosted
+    link: "https://cafebazaar.ir/app/com.behrad.hib.chelem",
+  },
+  {
+    title: "Mafia",
+    description:
+      "This app offers a fully digital version of the classic party game, letting players take on roles like Mafia, Doctor, Detective, and more. Designed for gatherings, the app manages role distribution, night phases, and voting—all with a sleek, intuitive interface.",
+    imageUrl: MAFIA,
+    techStack: ["Kotlin", "Jetpack Compose", "Room", "Hilt","Coroutines","ViewModel","LiveData"],
+    link: "https://cafebazaar.ir/app/ir.mrhib.mafia",
   },
 ];
 
@@ -63,7 +75,7 @@ type ProjectCardProps = {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => (
   <div className="bg-white shadow rounded-lg overflow-hidden">
-    <div className="h-48 w-full relative">
+    <div className="h-128 w-full relative">
       <img
         src={project.imageUrl}
         alt={project.title}
